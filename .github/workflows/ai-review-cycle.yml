@@ -2,6 +2,12 @@ name: AI Review Cycle
 on:
   pull_request_review_comment:
     types: [created]
+
+permissions:
+  pull-requests: write
+  issues: write
+  contents: read
+
 jobs:
   handle-coderabbit:
     runs-on: ubuntu-latest
