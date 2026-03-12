@@ -2,18 +2,24 @@
 
 > 🚀 **The ultimate toolkit for orchestrating n8n workflows with Gemini CLI (Antigravity).**
 
-This repository provides specialized **Skills** and **MCP Configurations** to turn your Gemini CLI into an expert n8n developer. It is inspired by the excellent work done for Claude by `czlonkowski`, but purely re-engineered for the Gemini ecosystem.
+This repository provides specialized **Skills** and **MCP Configurations** to turn your Gemini CLI into an expert n8n developer. It is inspired by the excellent work done for Claude by `czlonkowski`, but purely re-engineered for the Gemini ecosystem (March 2026 Edition).
 
 ## 📦 What's Inside?
 
 ### 1. n8n Expert Skill (`/skills/n8n-expert`)
 A native Gemini Skill that teaches the agent:
 *   **Syntax Mastery:** No more broken `{{ $json... }}` expressions.
-*   **Code Node Pro:** Generates perfect JavaScript/Python for data transformation.
-*   **Workflow Patterns:** Knows how to build resilient webhooks, API integrations, and AI Agents.
+*   **2026 AI Patterns:** Support for Agent Memory Graphs, Sub-Agent orchestration, and Human-in-the-loop validation.
+*   **Workflow Patterns:** Knows how to build resilient webhooks, API integrations, and advanced AI Agents.
 *   **Validation:** Auto-detects common mistakes before you even run the workflow.
 
-### 2. MCP Configuration (`/mcp-config`)
+### 2. n8n Architect Skill (`/skills/n8n-architect`)
+*NEW* focus on high-level system design:
+*   **Modular Architecture:** Controller/Worker patterns.
+*   **State Management:** Best practices using external databases (Supabase/Postgres).
+*   **Handoff Documentation:** Leverages `n8n_generate_workflow_doc` for professional READMEs.
+
+### 3. MCP Configuration (`/mcp-config`)
 Plug-and-play configurations to connect Gemini CLI to your local or remote n8n instance via the Model Context Protocol (MCP).
 
 ## 🚀 Installation
@@ -23,11 +29,12 @@ Plug-and-play configurations to connect Gemini CLI to your local or remote n8n i
 *   **n8n** instance running (local or cloud).
 *   **Supergateway** (optional, but recommended for easy HTTP tunneling).
 
-### Step 1: Install the Skill
-You can install the skill directly from this repository locally:
+### Step 1: Install the Skills
+You can install the skills directly from this repository locally:
 
 ```bash
 gemini skills install ./skills/n8n-expert --scope user
+gemini skills install ./skills/n8n-architect --scope user
 ```
 
 ### Step 2: Connect n8n (MCP)
@@ -52,7 +59,8 @@ gemini mcp add n8n-mcp "npx -y n8n-mcp" --env "MCP_MODE=stdio" --env "N8N_API_UR
 Once installed and reloaded (`/skills reload`), just talk to Gemini:
 
 *   *"Create a workflow that listens to a Webhook and sends a message to Slack."*
-*   *"Fix the expression error in this node."*
+*   *"Design a multi-workflow system for lead generation (n8n-architect)."*
+*   *"Generate technical documentation for workflow ID: abc-123."*
 *   *"Analyze my active workflows and suggest optimizations."*
 
 ## 🤝 Contribution

@@ -97,6 +97,7 @@ When building AI agents, ensure your "Tools" return clear, JSON-structured data 
 
 **References:**
 *   [AI Agent Workflows](references/ai_agent_workflow.md)
+*   [2026 Agent Patterns](references/2026_AGENT_PATTERNS.md)
 *   [Database Operations](references/database_operations.md)
 *   [HTTP Integrations](references/http_api_integration.md)
 
