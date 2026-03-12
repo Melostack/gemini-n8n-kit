@@ -1,0 +1,15 @@
+auto_respond_to_review_comments: true
+auto_apply_suggestions: true
+autofix_level: moderate
+listen_to_bot_comments: true
+bot_handlers:
+  - bot: "coderabbit[bot]"
+    action: "analyze_and_respond"
+    auto_fix: true
+    commit_suggested_fixes: true
+review_severity:
+  - minor
+  - major
+  - critical
+auto_commit: true
+commit_message_template: "chore: apply CodeRabbit suggestions"

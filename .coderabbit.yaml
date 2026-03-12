@@ -1,0 +1,22 @@
+reviews:
+  review_status: auto
+  autoReviewTurnsEnabled: true
+review_intimacy_level: chill
+auto_respond: true
+respond_to_ai_agents: true
+severity_levels:
+  critical:
+    auto_fix_enabled: true
+  major:
+    auto_fix_enabled: true
+  minor:
+    auto_fix_enabled: false
+    create_comment: true
+wait_for_response: true
+response_timeout_hours: 24
+rules:
+  - rule_name: "ignore_auto_generated"
+    paths:
+      - "node_modules/**"
+      - "dist/**"
+    action: skip
